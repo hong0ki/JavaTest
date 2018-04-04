@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  * @ClassName: TestEmail
- * @Description: TODO
+ * @Description: 验证邮箱
  * @author THINK
  * @date: 2018年4月2日 下午3:23:55 
  */
