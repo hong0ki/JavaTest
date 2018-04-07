@@ -1,6 +1,7 @@
 package com.lzh.product2;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 /**
  * 
@@ -79,10 +80,10 @@ public class Menu {
 	 * @Description: 查询所有
 	 */
 	private void queryAll() {
-		ArrayList<ProductBean> productBeans2= productManager.queryAll();
-		for(int i=0;i<productBeans2.size();i++) {
+		HashMap<Object, ProductBean> productBeans2= productManager.queryAll();
+		for(Object key:productBeans2.keySet()) {
 			
-			System.out.println(productBeans2.get(i).toString());
+			System.out.println(productBeans2.get(key).toString());
 		}
 	}
 	
@@ -94,9 +95,9 @@ public class Menu {
 	private void queryByName(Scanner sc) {
 		System.out.println("输入要查询的商品名称：");
 		String mName=sc.next();
-		ArrayList<ProductBean> productBeans1= productManager.queryByName(mName);
-		for(int i=0;i<productBeans1.size();i++) {
-			System.out.println(productBeans1.get(i).toString());
+		HashMap<Object, ProductBean> productBeans1= productManager.queryByName(mName);
+		for(Object key:productBeans1.keySet()) {
+			System.out.println(productBeans1.get(key).toString());
 			
 		}
 	}
@@ -108,8 +109,8 @@ public class Menu {
 	private void queryById(Scanner sc) {
 		System.out.println("输入要查询的商品id：");
 		int cId=sc.nextInt();
-		ArrayList<ProductBean> pro1= productManager.queryById(cId);
-		System.out.println(pro1.get(0).toString());
+		HashMap<Object, ProductBean> pro1= productManager.queryById(cId);
+		System.out.println(pro1.toString());
 	}
 	/**
 	 * @Title: update 

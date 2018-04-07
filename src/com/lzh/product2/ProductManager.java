@@ -81,10 +81,10 @@ public class ProductManager  {
 	 * @param id
 	 * @return
 	 */
-	public ArrayList<ProductBean> queryById(int id) {
-		ArrayList<ProductBean> pr1=new ArrayList<>();
+	public HashMap<Object, ProductBean> queryById(int id) {
+		HashMap<Object, ProductBean> pr1=new HashMap<>();
 		if (isExistId(id)) {
-			pr1.add(productBeans.get(id));
+			pr1.put(id,productBeans.get(id));
 		}
 		return pr1;
 	}
@@ -94,11 +94,11 @@ public class ProductManager  {
 	 * @param name
 	 * @return
 	 */
-	public ArrayList<ProductBean> queryByName(String name)  {
-		ArrayList<ProductBean> list=new ArrayList<>();
+	public HashMap<Object, ProductBean> queryByName(String name)  {
+		HashMap<Object, ProductBean> list=new HashMap<Object, ProductBean>();
 		for (Object key : productBeans.keySet()) {
 			if (productBeans.get(key).getProductName().toString().indexOf(name)>=0) {
-				list.add(productBeans.get(key));
+				list.put(productBeans.get(key).getId(),productBeans.get(key));
 			}
 		}
 		
@@ -110,12 +110,9 @@ public class ProductManager  {
 	 * @Description: 查询所有
 	 * @return
 	 */
-	public ArrayList<ProductBean> queryAll() {
-		ArrayList<ProductBean> pro2=new ArrayList<>();
-		for (Object key : productBeans.keySet()) {
-			pro2.add(productBeans.get(key));
-		}
-		return pro2;		
+	public HashMap<Object, ProductBean> queryAll() {
+		
+		return productBeans;		
 	}
 
 
