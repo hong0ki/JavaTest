@@ -1,12 +1,24 @@
 package com.lzh.collection;
 
 import java.util.HashMap;
-
+/**
+ * 
+ * @ClassName: HashMapDemo
+ * @Description HashMao测试
+ * @author 李卓宏
+ * @date: 2018年4月8日 上午8:59:37
+ */
 public class HashMapDemo {
 	
 	public static void main(String[] args) {
 		test();
 	}
+	/**
+	 * @Title: test 
+	 * @Description: 测试HashMap方法
+	 * @Params 
+	 * @return void
+	 */
 
 	private static void test() {
 		

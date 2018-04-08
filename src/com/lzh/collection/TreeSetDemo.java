@@ -1,14 +1,24 @@
 package com.lzh.collection;
 
-import java.util.Iterator;
 import java.util.TreeSet;
-
+/**
+ * 
+ * @ClassName: TreeSetDemo
+ * @Description: TreeSet测试
+ * @author 李卓宏
+ * @date: 2018年4月8日 上午9:02:48
+ */
 public class TreeSetDemo {
 	
 	public static void main(String[] args) {
 		test();
 	}
-
+	/**
+	 * @Title: test 
+	 * @Description: TreeSet测试方法
+	 * @Params 
+	 * @return void
+	 */
 	private static void test() {
 		
 		TreeSet<Object> tr=new TreeSet<>();

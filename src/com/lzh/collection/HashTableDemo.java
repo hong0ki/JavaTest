@@ -1,14 +1,25 @@
 package com.lzh.collection;
 
 import java.util.Hashtable;
-
+/**
+ * 
+ * @ClassName: HashTableDemo
+ * @Description: HashTable测试
+ * @author 李卓宏
+ * @date: 2018年4月8日 上午9:01:15
+ */
 public class HashTableDemo {
 
 	public static void main(String[] args) {
 		test();
 
 	}
-
+	/**
+	 * @Title: test 
+	 * @Description: HashTable方法测试
+	 * @Params 
+	 * @return void
+	 */
 	private static void test() {
 		//创建数组
 		Hashtable<Object, Object> hat=new Hashtable<>();
