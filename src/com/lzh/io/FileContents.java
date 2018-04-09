@@ -18,7 +18,7 @@ public class FileContents {
 	public static void main(String[] args) {
 		File file =new File("d:/feiq");
 		if (file.exists()) {
-			show(file,"--");
+			show(file,1);
 		}
 		
 	}
@@ -28,7 +28,7 @@ public class FileContents {
 	 * @param file
 	 * @return void
 	 */
-	private static void show(File file,String str) {
+	private static void show(File file,int k) {
 		File[] files=file.listFiles();
 		
 		for (int i = 0; i < files.length; i++) {
