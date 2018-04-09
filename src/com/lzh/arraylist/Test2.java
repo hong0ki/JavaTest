@@ -1,29 +1,23 @@
 /**
  * @Package: com.lzh.arraylist
  * @author: 李卓宏
- * @date: 2018年4月3日 下午3:50:29 
+ * @date: 2018年4月8日 下午4:10:45 
  */
 package com.lzh.arraylist;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.LinkedList;
 
 /**
- * @ClassName: Test
+ * @ClassName: Test2
  * @Description: TODO
  * @author 李卓宏
- * @date: 2018年4月3日 下午3:50:29 
+ * @date: 2018年4月8日 下午4:10:45 
  */
-public class Test {
-
-	/**@Title: main 
-	 * @Description: TODO(这里用一句话描述这个方法的作用)
-	 * @param args
-	 */
+public class Test2 {
+	
 	public static void main(String[] args) {
-		
-		ArrayList<PeopleBean> list=new ArrayList<PeopleBean>();
+		ArrayList<PeopleBean> list=new ArrayList<>();
 		
 		list.add(new PeopleBean(23,"打开","2001-04-11"));
 		list.add(new PeopleBean(22,"看看","2007-12-11"));
@@ -31,11 +25,20 @@ public class Test {
 		list.add(new PeopleBean(28,"客服","2001-02-11"));
 		list.add(new PeopleBean(13,"了开","2003-10-11"));
 		
-		//Collections.sort(list);
-		
 		for (PeopleBean peopleBean : list) {
 			System.out.println(peopleBean);
 		}
+		System.out.println("------------------");
+		Collections.sort(list, new PeopleAgeSort());
+		for (PeopleBean peopleBean : list) {
+			System.out.println(peopleBean);
+		}
+		System.out.println("------------------");
+		Collections.sort(list, new PeopleDateSort());
+		for (PeopleBean peopleBean : list) {
+			System.out.println(peopleBean);
+		}
+	
 	}
 
 }

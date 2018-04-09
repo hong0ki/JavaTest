@@ -1,6 +1,7 @@
 package com.lzh.collection;
 
 import java.util.HashMap;
+import java.util.Iterator;
 /**
  * 
  * @ClassName: HashMapDemo
@@ -46,6 +47,11 @@ public class HashMapDemo {
 		 */
 		for (Object key : ham.keySet()) {
 			System.out.println(ham.get(key));
+		}
+		Iterator<Object> iterator=ham.keySet().iterator();
+		while (iterator.hasNext()) {
+			Object key=iterator.next();
+			System.out.println("key:"+key+"  value:"+ham.get(key));
 		}
 	}
 
