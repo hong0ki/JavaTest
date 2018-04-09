@@ -16,9 +16,9 @@ import java.io.File;
 public class FileContents {
 	
 	public static void main(String[] args) {
-		File file =new File("d:/feiq");
+		File file =new File("e:/book");
 		if (file.exists()) {
-			show(file,1);
+			show(file,0);
 		}
 		
 	}
@@ -29,18 +29,21 @@ public class FileContents {
 	 * @return void
 	 */
 	private static void show(File file,int k) {
-		File[] files=file.listFiles();
-		
-		for (int i = 0; i < files.length; i++) {
-			
-			if (files[i].isDirectory()) {
-				System.out.println(str+"--"+files[i].getName());
-				//str+=str;
-				show(files[i],str);
-			}else {
-				System.out.println(str+"----"+files[i].getName());
+		String  str="|";
+		for (int i = 0; i < k; i++) {
+			str=str+"--";
+		}
+		if (file.isDirectory()) {
+			System.out.println(str+file.getName());
+			File[] files=file.listFiles();
+			for (int i = 0; i < files.length; i++) {
+				show(files[i], k+1);
 			}
 			
+		}
+		if (file.isFile()) {
+			System.out.println(str+file.getName());
+			//k=k-1;
 		}
 	}
 
