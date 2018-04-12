@@ -54,8 +54,8 @@ public class FileDemo {
 		File file2=new File(file,string);
 		if (!file2.exists()) {
 			file2.createNewFile();
-			System.out.println("----");
-			System.out.println(file2.toString());
+//			System.out.println("----");
+//			System.out.println(file2.toString());
 		}
 	}
 

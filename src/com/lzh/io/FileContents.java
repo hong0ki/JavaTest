@@ -16,7 +16,7 @@ import java.io.File;
 public class FileContents {
 	
 	public static void main(String[] args) {
-		File file =new File("e:/book");
+		File file =new File("d:/feiq");
 		if (file.exists()) {
 			show(file,0);
 		}
@@ -29,10 +29,12 @@ public class FileContents {
 	 * @return void
 	 */
 	private static void show(File file,int k) {
+		//设置分级
 		String  str="|";
 		for (int i = 0; i < k; i++) {
 			str=str+"--";
 		}
+		//如果是目录递归
 		if (file.isDirectory()) {
 			System.out.println(str+file.getName());
 			File[] files=file.listFiles();
@@ -41,9 +43,10 @@ public class FileContents {
 			}
 			
 		}
+		//如果是文件，就输出
 		if (file.isFile()) {
 			System.out.println(str+file.getName());
-			//k=k-1;
+			
 		}
 	}
 
