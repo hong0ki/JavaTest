@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<products>
+  <product id="12">
+    <productName>d分级</productName>
+    <price>43.0</price>
+  </product>
+  <product id="13">
+    <productName>是d</productName>
+    <price>42.0</price>
+  </product>
+  <product id="14">
+    <productName>d杀毒d</productName>
+    <price>13.0</price>
+  </product>
+  <product id="15">
+    <productName>是个</productName>
+    <price>53.0</price>
+  </product>
+  <product id="16">
+    <productName>d符f</productName>
+    <price>90.0</price>
+  </product>
+  <product id="17">
+    <productName>但3</productName>
+    <price>3.0</price>
+  </product>
+  <product id="18">
+    <productName>d发的</productName>
+    <price>4.0</price>
+  </product>
+</products>

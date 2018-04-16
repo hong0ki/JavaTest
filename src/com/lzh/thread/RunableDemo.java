@@ -9,21 +9,35 @@ package com.lzh.thread;
  * @ClassName: RunableDemo
  * @Description: TODO
  * @author 李卓宏
- * @date: 2018年4月12日 上午10:02:06 
+ * @date: 2018年4月12日 上午10:02:06
  */
-public class RunableDemo implements Runnable{
+public class RunableDemo implements Runnable {
 
-	
+	private int ticket = 100;
 
-	/* Title: run
+	/*
+	 * Title: run
+	 * 
 	 * @Description: TODO
+	 * 
 	 * @see java.lang.Runnable#run()
 	 */
 	@Override
 	public void run() {
-		for (int i = 0; i < 100; i++) {
-			System.out.println(Thread.currentThread().getName()+"线程"+i+"开始了&&&&&&&");
+
+		while (true) {
+			synchronized (this) {
+				if (ticket > 0) {
+
+					System.out.println(Thread.currentThread().getName() + "你买的票号是：" + this.ticket--);
+				} else {
+					break;
+				}
+
+			}
+
 		}
+
 	}
 
 }
