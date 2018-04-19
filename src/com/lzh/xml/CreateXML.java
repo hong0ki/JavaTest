@@ -29,13 +29,16 @@ public class CreateXML {
 	 */
 	public CreateXML() {
 		productBeans = new ArrayList<>();
-		productBeans.add(new ProductBean(12, "d分级", 43));
-		productBeans.add(new ProductBean(13, "是d", 42));
-		productBeans.add(new ProductBean(14, "d杀毒d", 13));
-		productBeans.add(new ProductBean(15, "是个", 53));
-		productBeans.add(new ProductBean(16, "d符f", 90));
-		productBeans.add(new ProductBean(17, "但3", 3));
-		productBeans.add(new ProductBean(18, "d发的", 4));
+		productBeans.add(new ProductBean(12, "西服", 43));
+		productBeans.add(new ProductBean(13, "椅子", 42));
+		productBeans.add(new ProductBean(14, "大床", 13));
+		productBeans.add(new ProductBean(15, "窗帘", 53));
+		productBeans.add(new ProductBean(16, "洗衣机", 190));
+		productBeans.add(new ProductBean(17, "毯子", 37));
+		productBeans.add(new ProductBean(18, "衣服", 45));
+		productBeans.add(new ProductBean(19, "裤子", 84));
+		productBeans.add(new ProductBean(20, "毛巾", 44));
+		productBeans.add(new ProductBean(21, "鞋子", 14));
 	}
 
 	/**
@@ -66,7 +69,7 @@ public class CreateXML {
 	 * @throws IOException
 	 * @return void
 	 */
-	public static void createXml() throws IOException {
+	public void createXml() throws IOException {
 		//输出带格式的xml文本
 		OutputFormat format = OutputFormat.createPrettyPrint();
 		XMLWriter writer = new XMLWriter(new FileWriter("products.xml"), format);
@@ -74,8 +77,5 @@ public class CreateXML {
 		writer.close();
 	}
 
-	public static void main(String[] args) throws IOException {
-		CreateXML cXml = new CreateXML();
-		cXml.createXml();
-	}
+	
 }

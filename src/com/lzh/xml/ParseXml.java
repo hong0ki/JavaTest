@@ -19,6 +19,12 @@ import org.dom4j.io.SAXReader;
  * @date: 2018年4月16日 下午5:22:53 
  */
 public class ParseXml {
+	
+	/**
+	 * 构造方法
+	 */
+	public ParseXml() {
+	}
 	/**
 	 * @Title: parse 
 	 * @Description: 将xml转document
@@ -39,7 +45,7 @@ public class ParseXml {
 	 * @throws DocumentException
 	 * @return ArrayList<ProductBean>
 	 */
-	public static ArrayList<ProductBean> xmlToList() throws DocumentException {
+	public ArrayList<ProductBean> xmlToList() throws DocumentException {
 		
 		Document document=parse();
 		//获取根节点
@@ -59,20 +65,6 @@ public class ParseXml {
 		}
 		return productBeans;
 	}
-	/**
-	 * @Title: main 
-	 * @Description: 开始
-	 * @param args
-	 * @throws DocumentException
-	 * @return void
-	 */
-	public static void main(String[] args) throws DocumentException {
-		
-		ArrayList<ProductBean> pro=xmlToList();
-		//循环输出list里的内容
-		for (ProductBean productBean : pro) {
-			System.out.println(productBean);
-		}
-	}
+	
 
 }
